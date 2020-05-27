@@ -5,10 +5,8 @@ public class Run {
 	public static void main(String[] args) {
 		DbApp db = new DbApp();
 		printAuth();
+		//db.dbConnect();
 		
-		db.dbConnect();
-		
-
 		String choice = null;
         Scanner scan = new Scanner(System.in);
         do {
@@ -73,8 +71,8 @@ public class Run {
 		
         
         System.out.println("GoodByyye amigoo =)");
-        scan.close();
-        db.dbDisconnect();
+        scan.close(); //close scanner
+        db.dbDisconnect(); //disconnect the database
         return;
 	}
 
@@ -90,7 +88,7 @@ public class Run {
 		System.out.println("-----------------------------------------------------------");
 	}
 	
-	public static void printAuth() {
+	public static void printAuth() { //some eye candy
 		System.out.println("===========================================================");
 		System.out.println(" _  __     _ _   _  __     _ _               ____          ");
 		System.out.println("| |/ /__ _| (_) | |/ /__ _| | |_ ___  __ _  |  _ \\ ___ ____");
